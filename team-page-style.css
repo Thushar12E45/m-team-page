@@ -1,0 +1,183 @@
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    max-width: 850px;
+    margin:0 auto;
+}
+header
+{
+    width: 100%;
+    height: 10vh;
+    display: flex;    
+}
+section
+{
+    height: 80vh;
+    width: 100%;
+    margin: auto;
+}
+    
+#title h2
+{   
+    font-family: 'PT Serif', serif;
+    width: 300px;
+    padding: 4vh ;
+    font-size: 30px;
+    letter-spacing: -0.045em;
+    font-weight: 700;    
+}
+#description
+{
+    font-family: 'Poppins', sans-serif;
+    width: 300px;
+    padding: 4vh 30px;
+    font-size: 0.8em;
+    line-height: 1.4em;
+}
+#description h3
+{   width: 300px;
+    font-weight: 600;
+    margin: 2% 0;
+}
+.image-container
+{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px;
+    grid-template-areas: "photo1 photo2 photo3" "photo4 photo5 photo6";
+    column-gap: 25px;
+    row-gap: 20vh;
+    align-content: flex-end;
+    margin-top: 150px;
+}
+span
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding-top: 20px;
+}
+h4
+{
+    position: absolute;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    left: 85%;
+    top: 0;
+    font-size: 12px;
+}
+.box
+{
+    position: relative;
+}
+img
+{
+    object-fit: contain;
+    height: 240px;
+}
+.box1
+{
+    grid-area: "photo1";
+}
+.box2
+{
+    grid-area: "photo2";
+    margin-top: 70px;
+}
+.box3
+{
+    grid-area: "photo3";
+}
+.box4
+{
+    grid-area: "photo4";
+}
+.box5
+{
+    grid-area: "photo5";
+    margin-top: 70px;
+}
+.box6
+{
+    grid-area: "photo6";
+}
+
+@media All  and (min-width:641px) and (max-width:1007px)
+{
+    .container
+    { 
+         margin: 0 10vh; 
+         max-width: 850px;
+    }
+    .image-container
+    {
+        column-gap:5px;
+    }
+}
+@media All and (max-width:640px)
+{
+    .container 
+    {
+        width: 100%;
+        margin: 0;
+        padding: 5%;
+    }
+    header
+    {
+        flex-direction: column;
+        margin: 0;
+        height: 10vh;
+    }
+    section 
+    {
+        padding: 0;
+        height:1000px
+    }
+    #title h2
+    {
+        margin: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        height: 1em;
+
+    }
+    #description
+    {
+        width:100%;
+        padding:  8vh 0;
+        min-height:25px;
+    }
+    .image-container
+    {
+        display: grid;
+        grid-template-columns: 40% 40% ;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "photo1 photo2 " "photo3 photo4" "photo5 photo6";
+        column-gap: 10vw;
+        row-gap: 20px;
+    }
+    img
+    {
+       object-fit: fill;
+       height: 50vw;
+    }
+    .box4,.box6
+    {
+          margin-top: 70px;
+    }
+    .box5 
+    {
+            margin-top: 0;
+    }
+    h4 
+    {
+           left: 100%;
+    }
+}
+
+
